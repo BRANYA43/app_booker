@@ -1,0 +1,5 @@
+sqlalchemy==1.4.46
+wxPython==4.2.0
+flake8==6.0.0
+flake8-builtins==2.1.0
+flake8-import-order==0.18.2
