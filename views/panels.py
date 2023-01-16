@@ -111,7 +111,7 @@ class OrdersTab(wx.Panel):
         pass
 
 
-class Form(wx.Panel):
+class FormPanel(wx.Panel):
 
     def __init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition, size=wx.Size(-1, -1), style=wx.TAB_TRAVERSAL,
                  name=wx.EmptyString):
@@ -151,7 +151,7 @@ class Form(wx.Panel):
         pass
 
 
-class Info(wx.Panel):
+class InfoPanel(wx.Panel):
 
     def __init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition, size=wx.Size(-1, -1), style=wx.TAB_TRAVERSAL,
                  name=wx.EmptyString):
@@ -191,7 +191,7 @@ class Info(wx.Panel):
         pass
 
 
-class Error(wx.Panel):
+class ErrorPanel(wx.Panel):
 
     def __init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition, size=wx.Size(-1, -1), style=wx.TAB_TRAVERSAL,
                  name=wx.EmptyString):
