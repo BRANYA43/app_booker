@@ -1,4 +1,5 @@
 import wx
+from .panels import ErrorPanel, FormPanel, InfoPanel
 
 
 class EmployeeForm(wx.Dialog):
@@ -175,10 +176,11 @@ class DetailForm(wx.Dialog):
                            size=wx.DefaultSize, style=wx.DEFAULT_DIALOG_STYLE)
 
         self.SetSizeHints(wx.DefaultSize, wx.DefaultSize)
-        self.some_panel = wx.Panel(self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL)
+
+        self.form_panel = FormPanel(self)
 
         main_sizer = wx.BoxSizer(wx.VERTICAL)
-        main_sizer.Add(self.some_panel, 1, wx.EXPAND | wx.ALL, 5)
+        main_sizer.Add(self.form_panel, 1, wx.EXPAND | wx.ALL, 5)
         main_sizer.Fit(self)
 
         self.SetSizer(main_sizer)
@@ -197,10 +199,10 @@ class OperationForm(wx.Dialog):
 
         self.SetSizeHints(wx.DefaultSize, wx.DefaultSize)
 
-        self.some_panel = wx.Panel(self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL)
+        self.form_panel = FormPanel(self)
 
         main_sizer = wx.BoxSizer(wx.VERTICAL)
-        main_sizer.Add(self.some_panel, 1, wx.EXPAND | wx.ALL, 5)
+        main_sizer.Add(self.form_panel, 1, wx.EXPAND | wx.ALL, 5)
         main_sizer.Fit(self)
 
         self.SetSizer(main_sizer)
@@ -395,10 +397,10 @@ class DetailInfo(wx.Dialog):
 
         self.SetSizeHints(wx.DefaultSize, wx.DefaultSize)
 
-        self.some_panel = wx.Panel(self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL)
+        self.info_panel = InfoPanel(self)
 
         main_sizer = wx.BoxSizer(wx.VERTICAL)
-        main_sizer.Add(self.some_panel, 1, wx.EXPAND | wx.ALL, 5)
+        main_sizer.Add(self.info_panel, 1, wx.EXPAND | wx.ALL, 5)
         main_sizer.Fit(self)
 
         self.SetSizer(main_sizer)
@@ -417,10 +419,10 @@ class OperationInfo(wx.Dialog):
 
         self.SetSizeHints(wx.DefaultSize, wx.DefaultSize)
 
-        self.some_panel = wx.Panel(self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL)
+        self.info_panel = InfoPanel(self)
 
         main_sizer = wx.BoxSizer(wx.VERTICAL)
-        main_sizer.Add(self.some_panel, 1, wx.EXPAND | wx.ALL, 5)
+        main_sizer.Add(self.info_panel, 1, wx.EXPAND | wx.ALL, 5)
         main_sizer.Fit(self)
 
         self.SetSizer(main_sizer)
@@ -439,10 +441,10 @@ class ExceptionDialog(wx.Dialog):
 
         self.SetSizeHints(wx.DefaultSize, wx.DefaultSize)
 
-        self.some_panel = wx.Panel(self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL)
+        self.error_panel = ErrorPanel(self)
 
         main_sizer = wx.BoxSizer(wx.VERTICAL)
-        main_sizer.Add(self.some_panel, 1, wx.EXPAND | wx.ALL, 5)
+        main_sizer.Add(self.error_panel, 1, wx.EXPAND | wx.ALL, 5)
         main_sizer.Fit(self)
 
         self.SetSizer(main_sizer)
@@ -461,10 +463,10 @@ class ErrorDialog(wx.Dialog):
 
         self.SetSizeHints(wx.DefaultSize, wx.DefaultSize)
 
-        self.some_panel = wx.Panel(self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL)
+        self.error_panel = ErrorPanel(self)
 
         main_sizer = wx.BoxSizer(wx.VERTICAL)
-        main_sizer.Add(self.some_panel, 1, wx.EXPAND | wx.ALL, 5)
+        main_sizer.Add(self.error_panel, 1, wx.EXPAND | wx.ALL, 5)
         main_sizer.Fit(self)
 
         self.SetSizer(main_sizer)
